@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Civic Service Request Portal</title>
+    </head>
+    <body>
+        <!-- Main Heading -->
+         <h1>City Government Service Portal</h1>
+         <p>Welcome. Use this form to submit infrastructure issues in your neighborhood.</p>
+        <!-- Interactive Section -->
+         <h2>Submit a New Request</h2>
+
+        <form>
+            <!-- Text Input -->
+             <label for="issue-title">Issue Title:</label><br>
+             <input type="text" id="issue-title" placeholder="e.g., Pothole on Main St."><br><br>
+            
+            <!-- Dropdown Selector-->
+             <label for="category">Category:</label><br>
+             <select id="category">
+                <option value="roads">Roads & Sidewalks</option>
+                <option value="lighting">Street Lights</option>
+                <option value="waste">Garbage & Sanitation</option>
+             </select><br><br>
+
+            <!-- Text Area -->
+             <label for="description">Details / Location:</label><br>
+             <textarea id="description" rows="4" cols="30"></textarea><br><br>
+
+             <!-- Radio Buttons: User must select exactly ONE urgency level -->
+              <p>Select Urgency Level:</p>
+              <input type="radio" id="low" name="urgency" value="low">
+              <label for="low">Low (Standard maintenance)</label><br>
+
+              <input type="radio" id="high" name="urgency" value="high">
+              <label for="high">High (Safety hazard / Active danger</label><br><br>
+
+            <!-- Checkbox: Standard Legal compliance checkbox for public portals -->
+             <input type="checkbox" id="terms" required>
+             <label for="terms">I certify that the information provided is accurate and true.</label><br><br>
+
+            <!-- Submit Button -->
+             <button type="submit">Submit Request to City Hall</button>
+        </form>
+        <br><hr><br>
+
+        <h2>Recent Public Submissions Log</h2>
+
+        <!-- The table wrapper -->
+         <table border="1">
+            <!-- th = Table Header (The top row with labels) -->
+             <thead>
+                <tr>
+                    <th>Request ID</th>
+                    <th>Issue Title</th>
+                    <th>Department Assigned</th>
+                    <th>Status</th>
+                </tr>
+             </thead>
+
+             <!-- td = Table Data (The actual rows of information) -->
+              <tbody>
+                <tr>
+                    <td>#1024</td>
+                    <td>Pothole on Main St.</td>
+                    <td>Public Works</td>
+                    <td><strong>In Progress</strong></td>
+                </tr>
+
+                <tr>
+                    <td>#1025</td>
+                    <td>Broken Streelight - 5th Ave</td>
+                    <td>Bureau of Electricity</td>
+                    <td><em>Pending Review</em></td>
+                </tr>
+              </tbody>
+         </table>
+         
+    </body>
+</html>
